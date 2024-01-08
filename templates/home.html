@@ -6,6 +6,40 @@
     <title>Diabetes Prediction</title>
   </head>
   <body>
-    <h1>Hello, World!</h1>
+    <form action="{{url_for('predict')}}" method="post">
+      <!-- Inputs for 'age', 'sex', 'bmi', 'bp', 's1', 's2', 's3', 's4', 's5', 's6' -->
+      <label for="age">Age: </label>
+      <input type="text" name="age" placeholder="Age" required /> <br />
+
+      <label for="Sex">Sex: </label>
+      <input type="text" name="sex" placeholder="Sex" required /> <br />
+
+      <label for="bmi">BMI: </label>
+      <input type="text" name="bmi" placeholder="BMI" required /> <br />
+
+      <label for="bp">BP: </label>
+      <input type="text" name="bp" placeholder="BP" required /> <br />
+
+      <label for="s1">S1: </label>
+      <input type="text" name="s1" placeholder="S1" required /> <br />
+
+      <label for="s2">S2: </label>
+      <input type="text" name="s2" placeholder="S2" required /> <br />
+
+      <label for="s3">S3: </label>
+      <input type="text" name="s3" placeholder="S3" required /> <br />
+
+      <label for="s4">S4: </label>
+      <input type="text" name="s4" placeholder="S4" required /> <br />
+
+      <label for="s5">S5: </label>
+      <input type="text" name="s5" placeholder="S5" required /> <br />
+
+      <label for="s6">S6: </label>
+      <input type="text" name="s6" placeholder="S6" required /> <br />
+
+      <button type="submit" value="Predict">Predict</button>
+    </form>
+    {{prediction_text}}
   </body>
 </html>
