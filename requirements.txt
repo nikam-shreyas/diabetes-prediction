@@ -11,6 +11,7 @@ exceptiongroup==1.2.0
 executing==2.0.1
 Flask==3.0.0
 fonttools==4.47.0
+gunicorn==21.2.0
 importlib-metadata==7.0.1
 importlib-resources==6.1.1
 ipykernel==6.28.0
@@ -55,4 +56,3 @@ tzdata==2023.4
 wcwidth==0.2.13
 Werkzeug==3.0.1
 zipp==3.17.0
-gunicorn
