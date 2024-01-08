@@ -4,42 +4,126 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diabetes Prediction</title>
+    <!-- add the style.css file -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* FILEPATH: /Users/zeronp/Downloads/ml-deployment/diabetes-prediction/templates/style.css */
+
+      /*  */
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid #ccc;
+        padding: 20px;
+      }
+
+      /* Form labels */
+      form label {
+        display: inline-block;
+        width: 100px;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      /* Form inputs */
+      form input[type="text"],
+      form input[type="email"],
+      form input[type="password"] {
+        display: inline-block;
+        width: calc(100% - 120px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      /* Submit button */
+      form button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      form button:hover {
+        background-color: #45a049;
+      }
+
+      /* Css for the predicted text after clicking the submit button */
+      .prediction {
+        margin-top: 20px;
+        padding: 20px;
+
+        border-radius: 4px;
+      }
+
+      /* Css for the h1 tag */
+      h1 {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
+    <h1>Diabetes Prediction</h1>
     <form action="{{url_for('predict')}}" method="post">
       <!-- Inputs for 'age', 'sex', 'bmi', 'bp', 's1', 's2', 's3', 's4', 's5', 's6' -->
-      <label for="age">Age: </label>
-      <input type="text" name="age" placeholder="Age" required /> <br />
+      <div>
+        <label for="age">Age: </label>
+        <input type="text" name="age" placeholder="Age" required />
+      </div>
 
-      <label for="Sex">Sex: </label>
-      <input type="text" name="sex" placeholder="Sex" required /> <br />
+      <div>
+        <label for="Sex">Sex: </label>
+        <input type="text" name="sex" placeholder="Sex" required />
+      </div>
 
-      <label for="bmi">BMI: </label>
-      <input type="text" name="bmi" placeholder="BMI" required /> <br />
+      <div>
+        <label for="bmi">BMI: </label>
+        <input type="text" name="bmi" placeholder="BMI" required />
+      </div>
 
-      <label for="bp">BP: </label>
-      <input type="text" name="bp" placeholder="BP" required /> <br />
+      <div>
+        <label for="bp">BP: </label>
+        <input type="text" name="bp" placeholder="BP" required />
+      </div>
 
-      <label for="s1">S1: </label>
-      <input type="text" name="s1" placeholder="S1" required /> <br />
+      <div>
+        <label for="s1">S1: </label>
+        <input type="text" name="s1" placeholder="S1" required />
+      </div>
 
-      <label for="s2">S2: </label>
-      <input type="text" name="s2" placeholder="S2" required /> <br />
+      <div>
+        <label for="s2">S2: </label>
+        <input type="text" name="s2" placeholder="S2" required />
+      </div>
 
-      <label for="s3">S3: </label>
-      <input type="text" name="s3" placeholder="S3" required /> <br />
+      <div>
+        <label for="s3">S3: </label>
+        <input type="text" name="s3" placeholder="S3" required />
+      </div>
 
-      <label for="s4">S4: </label>
-      <input type="text" name="s4" placeholder="S4" required /> <br />
+      <div>
+        <label for="s4">S4: </label>
+        <input type="text" name="s4" placeholder="S4" required />
+      </div>
 
-      <label for="s5">S5: </label>
-      <input type="text" name="s5" placeholder="S5" required /> <br />
+      <div>
+        <label for="s5">S5: </label>
+        <input type="text" name="s5" placeholder="S5" required />
+      </div>
 
-      <label for="s6">S6: </label>
-      <input type="text" name="s6" placeholder="S6" required /> <br />
+      <div>
+        <label for="s6">S6: </label>
+        <input type="text" name="s6" placeholder="S6" required />
+      </div>
 
       <button type="submit" value="Predict">Predict</button>
     </form>
-    {{prediction_text}}
+
+    <div class="prediction">{{prediction_text}}</div>
   </body>
 </html>
